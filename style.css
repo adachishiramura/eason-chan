@@ -3,7 +3,7 @@
     position: relative;
     padding: 20px 20px 10px 20px; 
     border-bottom: 2px solid #dddddd;
-    width: 2400px;
+    width: 2600px;
     height: 300px;
     background-repeat: no-repeat;
 
@@ -21,9 +21,8 @@
     background-position: center;
     background-repeat: no-repeat;
     
-    opacity: 0.4; 
-    
-    z-index: 1; 
+    opacity: 0.32; 
+    z-index: -1; 
 }
 #in-bg{
     display: flex;
@@ -38,4 +37,39 @@
 
     font-size: 100px;
 
+}
+/* part 2*/
+.album{
+    border-radius: 12px;
+    background-color: #fefefedc;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    scroll-snap-align: start; 
+    width: auto;
+    height: auto;  
+
+}
+
+.album h3{
+    font-size: 30px;
+}
+.album img{
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+}
+.album-slider {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 40px) / 3);
+    gap: 25px;
+    overflow-x: auto;
+    padding: 25px 0;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; 
+}
+
+.card-slider::-webkit-scrollbar {
+    display: none;
 }
